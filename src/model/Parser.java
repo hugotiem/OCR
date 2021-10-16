@@ -20,7 +20,7 @@ public class Parser {
         map.put("010111011", 9);
     }
 
-    private int parse(String value) {
+    public int parse(String value) {
         if (map.containsKey(value)) {
             return map.get(value);
         }
