@@ -1,7 +1,6 @@
 package model;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class Parser {
 
@@ -25,5 +24,19 @@ public class Parser {
             return map.get(value);
         }
         return -1;
+    }
+
+    public String decode(String stringToDecode) {
+        String result = "";
+        String[] decomposedString = stringToDecode.split("");
+        for(String s: decomposedString) {
+            if(s.equals(" ")) {
+                result += "0";
+            }
+            else {
+                result += "1";
+            }
+        }
+        return result;
     }
 }
