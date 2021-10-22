@@ -35,9 +35,13 @@ public class TxTReader {
 
     public static void write(HashMap<String, Boolean> values) throws FileNotFoundException, UnsupportedEncodingException {
         PrintWriter writer = new PrintWriter("output.txt", "UTF-8");
-        System.out.println(values);
+        String suffix;
         for(Entry<String, Boolean> value : values.entrySet()) {
-            String suffix = !value.getValue() ? "ERR" : "";
+            if(value.getKey().contains("?")) {
+                suffix = "ILL";
+            } else {
+                suffix = !value.getValue() ? "ERR" : "";
+            }
             writer.println(value.getKey() + " " + suffix);
         }
         
