@@ -12,7 +12,14 @@ public class TxTReader {
     private static File file;
 
 
-    //--Lecture du fichier txt d'entrée--// 
+    /**
+     * Lecture du fichier txt d'entrée
+     * @param name the path of the txt file
+     * @return ArrayList of txt file line content
+     * @throws FileNotFoundException if path doesn't match with a file
+     * @throws IOException
+     */
+
     public static ArrayList<ArrayList<String>> read(String name) throws FileNotFoundException, IOException {
 
         //--Initialisation--//
@@ -38,7 +45,13 @@ public class TxTReader {
     }
 
 
-    //--Creation et ecriture d'un fichier txt--//
+    /**
+     * Creation et ecriture d'un fichier txt
+     * @param values values to write in a txt file
+     * @throws FileNotFoundException if the path does not match
+     * @throws UnsupportedEncodingException if unsupported encoding are used to write in the file
+     */
+
     public static void write(HashMap<String, Boolean> values) throws FileNotFoundException, UnsupportedEncodingException {
 
         //--Initialisation--//

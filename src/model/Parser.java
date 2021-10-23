@@ -26,7 +26,12 @@ public class Parser {
     }
 
 
-    //--Transforme un tableau en un string--//
+    /**
+     * Transforme un tableau en un string
+     * @param array array of string from a txt file
+     * @return array of string representing numbers
+     */
+
     public ArrayList<String> arrayReader(ArrayList<String> array) {
         ArrayList<String> results = new ArrayList<String>();
         //--Affichage tableau--//
@@ -44,7 +49,11 @@ public class Parser {
     }
 
 
-    //--Transformation des caractères en code Binaire--//
+    /**
+     * Transformation des caractères en code Binaire
+     * @param stringToDecode string which be decoded
+     * @return decoded string in binary code
+     */
     public String decode(String stringToDecode) {
         String result = "";
         String[] decomposedString = stringToDecode.split("");
@@ -60,7 +69,11 @@ public class Parser {
     }
 
 
-    //--Comparaison entre les valeurs récuperées et nos Valeurs de comparaisons--//
+    /**
+     * Comparaison entre les valeurs récuperées et nos Valeurs de comparaisons
+     * @param value the value to parse from binary code to number
+     * @return the number corresponding (-1 if value does not match with any binary code)
+     */
     public int parse(String value) {
         System.out.println(value);
         if (map.containsKey(value)) {
@@ -70,7 +83,11 @@ public class Parser {
     }
 
 
-    //--Analyse Caractère Inconnu--
+    /**
+     * Transfrom integer array to a String
+     * @param values the array to transform
+     * @return string of the integer array 
+     */
     public String intToString(ArrayList<Integer> values) {
         String result = "";
         for (int i : values) {
@@ -85,7 +102,11 @@ public class Parser {
     }
     
 
-    //--Checksum--//
+    /**
+     * Checksum
+     * @param values the values to calculate
+     * @return the checksum of the operation
+     */
     public boolean checksum(ArrayList<Integer> values) {
         int element = 0;
         for(int i = 1 ; i <= values.size() ; i++) {
