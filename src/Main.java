@@ -1,5 +1,14 @@
+import model.Launcher;
+
 public class Main {
+
     public static void main(String[] args) {
-        int i =0;
+        try {
+            Launcher.launch();
+        }
+
+        catch(Exception e) {
+            System.err.println("ERROR : " + e);
+        }
     }
 }
